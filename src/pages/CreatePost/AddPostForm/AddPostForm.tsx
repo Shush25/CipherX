@@ -235,7 +235,7 @@ const AddPostForm: React.FC = () => {
           </div>
           <div styleName="post-creator__post-buttons">
             <button type="submit" styleName="post-creator__post-button">
-              Post
+              Ship It
             </button>
           </div>
         </form>
