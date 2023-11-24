@@ -21,7 +21,7 @@ import {
 import { db, getUserId } from "../../firebase";
 import { Action } from "@reduxjs/toolkit";
 import { Link } from "react-router-dom";
-
+import chipkali from "../../assets/chhipkali1.png"
 interface Props {
   dropdown: string;
   handleHomeDropdown: Function;
@@ -74,11 +74,13 @@ const CommunityDropdown: React.FC<Props> = ({
             styleName="community-dropdown__link"
             to={`/r/${doc.data().communityId}`}
           >
-            <img
+            {/* <img
               styleName="community-dropdown__image"
-              src="https://styles.redditmedia.com/t5_2r0ij/styles/communityIcon_yor9myhxz5x11.png"
+              //src="https://styles.redditmedia.com/t5_2r0ij/styles/communityIcon_yor9myhxz5x11.png"
+              //src = {chipkali}
+              //style={{width:"20%"}}
               alt="default reddit subreddit logo"
-            />
+            /> */}
             <span styleName="community-dropdown__community">
               mw/{doc.data().communityId}
             </span>
