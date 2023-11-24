@@ -23,9 +23,9 @@ const PostAuthor: React.FC<Props> = ({
   return (
     <div styleName="post-excerpt__info">
       <Link to={`/r/${subredditName}`}>
-        <span styleName="post-excerpt__subreddit">r/{subredditName}</span>
+        <span styleName="post-excerpt__subreddit">mw/{subredditName}</span>
       </Link>
-      <span styleName="post-excerpt__posted-by">Posted by</span>
+      <span styleName="post-excerpt__posted-by">Issue owner</span>
       <p styleName="post-excerpt__author">/u/{userName}</p>
       <span styleName="post-excerpt__date">
         {moment(new Date(createdAt?.seconds * 1000)).fromNow()}

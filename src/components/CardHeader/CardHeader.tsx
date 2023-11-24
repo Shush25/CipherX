@@ -4,7 +4,7 @@ import styles from "./CardHeader.module.css";
 const CardHeader: React.FC = () => {
   return (
     <div styleName="card-header__top">
-      <h2 styleName="card-header__title">About Community</h2>
+      <h2 styleName="card-header__title">About Component</h2>
     </div>
   );
 };

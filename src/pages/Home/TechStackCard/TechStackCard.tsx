@@ -1,19 +1,32 @@
 import CSSModules from "react-css-modules";
 import Card from "../../../components/Card/Card";
 import styles from "./TechStackCard.module.css";
+import logo from "../../../assets/heart_copyright.jpg"
+import hansaLogo from "../../../assets/hansa.png"
+function escalate(){
+  alert("Developer is on vacation.");
+}
 
 const TechStackCard: React.FC = () => {
   return (
     <Card>
       <div styleName="tech-stack">
+        <img src={hansaLogo} style={{width:"100%",height:"140px",borderRadius:"3px"}}></img>
+        <br/>
+        <br/>
+        <div>
+          <h4>Hack Stack</h4>
+        </div>
+        <br/>
         <div styleName="techs">
+          
           <a
             href="https://reactjs.org/"
             styleName="tech"
             target="_blank"
             rel="noreferrer"
           >
-            React.js
+            Badam Milk
           </a>
           <a
             href="https://firebase.google.com/"
@@ -21,7 +34,7 @@ const TechStackCard: React.FC = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Firebase
+            Mango Juice
           </a>
           <a
             href="https://reactrouter.com/en/main"
@@ -29,7 +42,7 @@ const TechStackCard: React.FC = () => {
             target="_blank"
             rel="noreferrer"
           >
-            React Router
+            Sweet Lassi
           </a>
           <a
             href="https://redux.js.org/"
@@ -37,50 +50,74 @@ const TechStackCard: React.FC = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Redux
+            Pineapple Delight
           </a>
-          <a
-            href="https://www.typescriptlang.org/"
-            styleName="tech"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Typescript
-          </a>
-          <a
-            href="https://github.com/gajus/react-css-modules"
-            styleName="tech"
-            target="_blank"
-            rel="noreferrer"
-          >
-            React CSS Modules
-          </a>
-          <a
-            href="https://www.npmjs.com/package/nanoid"
-            styleName="tech"
-            target="_blank"
-            rel="noreferrer"
-          >
-            nanoid
-          </a>
-          <a
-            href="https://momentjs.com/"
-            styleName="tech"
-            target="_blank"
-            rel="noreferrer"
-          >
-            moment.js
-          </a>
-          <a
-            href="https://github.com/danilowoz/react-content-loader"
-            styleName="tech"
-            target="_blank"
-            rel="noreferrer"
-          >
-            React-ContentLoader
-          </a>
+          
         </div>
-        <p styleName="copyright">Tony Isern © 2021. All rights reserved</p>
+
+        <div>
+          <h4>Team Stack</h4>
+        </div>
+        <br/>
+        <div styleName="techs">
+          <a
+            href="https://inside-apps.mathworks.com/Facebook/FaceBookSearch?details=Y&emplid=116261"
+            styleName="tech"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Abhishek Singh(HYD)
+          </a>
+          <a
+            href="https://inside-apps.mathworks.com/Facebook/FaceBookSearch?details=Y&emplid=115067"
+            styleName="tech"
+            target="_blank"
+            rel="noreferrer"
+          >
+             Pranjal Saxena
+          </a>
+          <a
+            href="https://inside-apps.mathworks.com/Facebook/FaceBookSearch?details=Y&emplid=116249"
+            styleName="tech"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Piyush Patil
+          </a>
+          <a
+            href="https://inside-apps.mathworks.com/Facebook/FaceBookSearch?details=Y&emplid=116167"
+            styleName="tech"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Shushant Singh
+          </a>
+
+          <a
+            href="https://inside-apps.mathworks.com/Facebook/FaceBookSearch?details=Y&emplid=116185"
+            styleName="tech"
+            target="_blank"
+            rel="noreferrer"
+            style={{marginLeft:"50%",width:"max-content"}}
+          >
+            Sachin Khandelwal
+          </a>
+
+
+        </div>
+        
+        <p styleName="copyright">MATLAB Mavericks © 2023. All rights reserved</p>
+        <br/>
+        <div style={{alignContent:"center"}}>
+        <p  style={{textAlignLast:"center"}}  styleName="built">Crafted with <img  src={logo} style={{width:"15px",height:"15px",borderRadius:"3px",left:"50%"}}></img> in Golconda 2, FL2</p>
+        <p style={{textAlignLast:"center"}} > MathWorks, Hyderabad</p>
+        </div>
+        <br/>
+        <div style={{textAlign:"center"}}>
+        <button  style={{borderEndEndRadius:"15px",borderStartStartRadius:"15px",borderStartEndRadius:"15px",borderEndStartRadius:"15px",alignItems:"center",height:"40px",width:"313px",fontSize:"20px",fontWeight:"bold",cursor:"pointer"}}  onClick={escalate}> Escalate to Developer </button>
+        </div>
+        
+        
       </div>
     </Card>
   );

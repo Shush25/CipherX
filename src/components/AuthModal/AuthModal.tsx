@@ -80,29 +80,42 @@ const AuthModal: React.FC = () => {
     event.preventDefault();
 
     if (signUpModalState) {
-      if (password === confirmPassword) {
-        try {
-          const userCredential = await createUserWithEmailAndPassword(
-            auth,
-            email,
-            password
-          );
-          await updateProfile(userCredential.user, {
-            displayName: username,
-          });
-          dispatch(toggleSignUpModal());
-        } catch (error) {
-          alert(`Sorry, this email has already been used: ${error}`);
+      if (email.includes("mathworks.com"))
+      {
+        if (password === confirmPassword) {
+          try {
+            const userCredential = await createUserWithEmailAndPassword(
+              auth,
+              email,
+              password
+            );
+            await updateProfile(userCredential.user, {
+              displayName: username,
+            });
+            dispatch(toggleSignUpModal());
+          } catch (error) {
+            alert(`Sorry, this email has already been used: ${error}`);
+          }
+        } else {
+          alert("Please check your passwords again!");
         }
-      } else {
-        alert("Please check your passwords again!");
       }
+      else {
+        alert("Naughty hora ke!! Please use Mathworks Email. We ensure your safety.");
+      }
+      
     } else if (signInModalState) {
       try {
-        await signInWithEmailAndPassword(auth, email, password);
-        dispatch(toggleSignInModal());
+        if (email.includes("mathworks.com")) {
+          await signInWithEmailAndPassword(auth, email, password);
+          dispatch(toggleSignInModal());
+        }
+        else {
+          alert("Naughty hora ke!! Please use Mathworks Email. We ensure your safety.");
+        }
+        
       } catch (error) {
-        alert(`Wrong email or password. Please try again: ${error}`);
+        alert(`Wrong email or password. Please try again:`);
       }
     }
   }
@@ -127,30 +140,31 @@ const AuthModal: React.FC = () => {
             <form styleName="sign-up-modal__form" onSubmit={formSubmit}>
               <h1 styleName="sign-up-modal__title">
                 {(signInModalState && "Log In") ||
-                  (signUpModalState && "Sign Up")}
+                  (signUpModalState && "Ramp Up")}
               </h1>
               <p styleName="sign-up-modal__description">
-                By continuing,{" "}
+              When you hit Join, you're donning a superhero cape, pledging to be the guardian of secret hobby societies and undercover meme agents. We're creating a Batcave for office banter, and you're the Batman of privacy!
+Remember, what happens on Chhipkali, stays on Chhipkali!{" "}
                 {(signInModalState && "you") ||
                   (signUpModalState &&
-                    "you are setting up a Reddit account and")}{" "}
-                agree to our{" "}
-                <a
+                    "")}{" "}
+                 
+                {/* <a
                   styleName="sign-up-modal__link"
                   href="https://www.redditinc.com/policies/user-agreement"
                 >
                   User Agreement
-                </a>{" "}
-                and{" "}
-                <a
+                </a> */}
+                
+                {/* <a
                   styleName="sign-up-modal__link"
                   href="https://www.reddit.com/policies/privacy-policy"
                 >
                   Privacy Policy
-                </a>
-                .
+                </a> */}
+                
               </p>
-              <button styleName="sign-up-modal__oauth" onClick={onOAuthClick}>
+              {/* <button styleName="sign-up-modal__oauth" onClick={onOAuthClick}>
                 <img
                   styleName="sign-up-modal__icon"
                   src={googleIcon}
@@ -160,12 +174,12 @@ const AuthModal: React.FC = () => {
                   {" "}
                   Continue with Google
                 </p>
-              </button>
-              <div styleName="sign-up-modal__divider">
+              </button> */}
+              {/* <div styleName="sign-up-modal__divider">
                 <span styleName="sign-up-modal__divider-line"></span>
                 <span styleName="sign-up-modal__divider-text">OR</span>
                 <span styleName="sign-up-modal__divider-line"></span>
-              </div>
+              </div> */}
               <input
                 type="email"
                 styleName="sign-up-modal__input"
@@ -205,8 +219,8 @@ const AuthModal: React.FC = () => {
                 Continue
               </button>
               <div styleName="sign-up-modal__bottom-text-container">
-                {(signInModalState && "New to Reddit?") ||
-                  (signUpModalState && " Already a redditor?")}
+                {(signInModalState && "New to Chhipkali?") ||
+                  (signUpModalState && " Already a Chhipkali?")}
                 <button
                   styleName="sign-up-modal__bottom-text"
                   onClick={handleModalSwitch}

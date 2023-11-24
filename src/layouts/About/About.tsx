@@ -190,7 +190,7 @@ const About: React.FC = () => {
           </div>
           <Link to={`/r/${communityData.name}/submit`}>
             <button styleName="about__button about__button_type_create">
-              Create Post
+              Create Issue
             </button>
           </Link>
           <hr styleName="about__thematic-break"></hr>

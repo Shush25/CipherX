@@ -75,7 +75,7 @@ const CommunityModal: React.FC = () => {
           creatorId: getUserId(),
           id: nanoid(),
           createdAt: serverTimestamp(),
-          numberOfMembers: 1,
+          numberOfMembers: 9,
           privacyType: communityType,
           description: "default description",
         });
@@ -103,7 +103,7 @@ const CommunityModal: React.FC = () => {
       <div styleName="community-modal">
         <div styleName="community-modal__container">
           <div styleName="community-modal__header">
-            <h1 styleName="community-modal__title">Create a community</h1>
+            <h1 styleName="community-modal__title">Create a Component</h1>
             <img
               styleName="community-modal__icon community-modal__icon_type_exit"
               src={exitIcon}
@@ -115,7 +115,7 @@ const CommunityModal: React.FC = () => {
             <h3 styleName="community-modal__name">Name</h3>
             <div styleName="community-modal__description-container">
               <p styleName="community-modal__instruction">
-                Community names including capitalization cannot be changed
+                Component names including capitalization cannot be changed
                 <img
                   styleName="community-modal__icon"
                   src={informationIcon}
@@ -130,7 +130,7 @@ const CommunityModal: React.FC = () => {
                 maxLength={21}
                 type="text"
                 styleName="community-modal__input"
-                placeholder="r/gaming"
+                placeholder="mw/Issue"
                 value={subredditName}
                 onChange={handleSubredditName}
                 required
@@ -143,7 +143,7 @@ const CommunityModal: React.FC = () => {
             </div>
             <div styleName="community-modal__radio">
               <h3 styleName="community-modal__community-type-title">
-                Community type
+                Component type
               </h3>
               <div styleName="community-modal__radio-group">
                 <input
@@ -160,7 +160,7 @@ const CommunityModal: React.FC = () => {
                 />
                 <p styleName="community-modal__community-type">Public</p>
                 <p styleName="community-modal__community-type-description">
-                  Anyone can view, post, and comment to this community
+                  Anyone can view, post, and comment to this component
                 </p>
               </div>
             </div>
@@ -180,7 +180,7 @@ const CommunityModal: React.FC = () => {
                 />
                 <p styleName="community-modal__community-type">Restricted</p>
                 <p styleName="community-modal__community-type-description">
-                  Anyone can view this community, but only approved users can
+                  Anyone can view this component, but only approved users can
                   post
                 </p>
               </div>
@@ -216,7 +216,7 @@ const CommunityModal: React.FC = () => {
                 styleName="community-modal__button community-modal__button_type_create"
                 type="submit"
               >
-                Create Community
+                Create Component
               </button>
             </div>
           </form>

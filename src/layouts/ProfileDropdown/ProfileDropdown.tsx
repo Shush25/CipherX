@@ -17,6 +17,10 @@ const ProfileDropdown: React.FC<Props> = ({ dropdown }) => {
     navigate(`/user`);
   }
 
+  function logoutPop() {
+    alert("This is a known bug. Development team is working on this issue. They will consider fixing it in next hackday (no commitments).");
+  }
+
   return (
     <Dropdown dropdown={dropdown}>
       <div styleName="profile-dropdown">
@@ -24,7 +28,7 @@ const ProfileDropdown: React.FC<Props> = ({ dropdown }) => {
           <CgProfile styleName="profile-dropdown__icon" />
           Profile
         </button>
-        <button styleName="profile-dropdown__button" onClick={signOutUser}>
+        <button styleName="profile-dropdown__button" onClick={logoutPop}>
           <img
             styleName="profile-dropdown__icon"
             src={logOutIcon}

@@ -67,12 +67,17 @@ const Post: React.FC<Props> = (props) => {
     }
 
     props.data ?? fetchPost();
+    console.log(props.data);
   }, [postId, props.data]);
 
   const onVote = async (
     vote: number,
     event: React.MouseEvent<HTMLImageElement, MouseEvent>
   ) => {
+    if(vote==-1)
+    {
+      alert("We're all about the cheerleading, not the jeer-leading!");
+    }
     event.preventDefault();
     if (!isLoggedIn) {
       dispatch(toggleSignInModal());
@@ -162,16 +167,15 @@ const Post: React.FC<Props> = (props) => {
           <p styleName="post-excerpt__description">
             {props.data?.link ?? postData?.link}
           </p>
-          {props.data?.imageURL ||
-            (postData?.imageURL && (
-              <div styleName="post-excerpt__image-container">
-                <img
-                  styleName="post-excerpt__image"
-                  src={postData?.imageURL ?? props.data?.imageURL}
-                  alt="post"
-                />
-              </div>
-            ))}
+          {props.data?.imageURL ? (<div styleName="post-excerpt__image-container">
+            <img
+              styleName="post-excerpt__image"
+              src = {props.data?.imageURL ?? postData?.imageURL}
+              //src={postData?.imageURL ?? props.data?.imageURL}
+              alt="post"
+              style={{borderRadius:"5px"}}
+            />
+          </div>) : (<></>)}
         </div>
         <div styleName="post__buttons">
           <div styleName="post-excerpt__divider"></div>

@@ -57,7 +57,7 @@ const TopCommunitiesCard: React.FC = () => {
     <Card>
       <div styleName="top-communities__top-community-image">
         <h2 styleName="top-communities__top-community-title">
-          Top Communities
+          Best Bets
         </h2>
       </div>
       <ol styleName="top-communities__top-community-list">

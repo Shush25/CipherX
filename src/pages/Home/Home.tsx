@@ -51,7 +51,7 @@ const Home: React.FC = () => {
         </div>
         <Aside>
           <TopCommunitiesCard />
-          <PremiumCard />
+          <PremiumCard/>
           <PersonalHomeCard />
           <TechStackCard />
         </Aside>

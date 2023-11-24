@@ -58,13 +58,13 @@ const CommunityDropdown: React.FC<Props> = ({
   return (
     <Dropdown dropdown={dropdown}>
       <div styleName="community__dropdown">
-        <p styleName="community__dropdown-my-communities">MY COMMUNITIES</p>
+        <p styleName="community__dropdown-my-communities">My Components</p>
         <button
           styleName="community__dropdown-button"
           onClick={toggleCommunity}
         >
           <AiOutlinePlus styleName="community__dropdown-icon" />
-          Create Community
+          Create Component
         </button>
       </div>
       <div>
@@ -80,7 +80,7 @@ const CommunityDropdown: React.FC<Props> = ({
               alt="default reddit subreddit logo"
             />
             <span styleName="community-dropdown__community">
-              r/{doc.data().communityId}
+              mw/{doc.data().communityId}
             </span>
           </Link>
         ))}

@@ -138,7 +138,7 @@ const Header: React.FC<Props> = ({ subredditName }) => {
           <div styleName="header__title-container">
             <div styleName="header__title">
               <h1 styleName="header__subreddit-name">{subredditName}</h1>
-              <h2 styleName="header__subreddit-link">r/{subredditName}</h2>
+              <h2 styleName="header__subreddit-link">mw/{subredditName}</h2>
             </div>
             <div styleName="header__buttons">
               <button

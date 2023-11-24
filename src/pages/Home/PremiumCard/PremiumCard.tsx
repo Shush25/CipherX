@@ -8,21 +8,19 @@ const PremiumCard: React.FC = () => {
     <Card>
       <div styleName="premium-card">
         <div styleName="premium-card__content">
-          <img
-            styleName="premium-card__icon"
-            src={redditShield}
-            alt="reddit premium shield icon"
-          />
+          
           <div styleName="premium-card__text">
-            <h3 styleName="premium-card__title">Reddit Premium</h3>
-            <p styleName="premium-card__description">
-              The best Reddit experience, with monthly Coins
+            <strong styleName="premium-card__title" style={{fontSize:"18px"}}>MATLAB Mavericks</strong>
+            <br/>
+            <br/>
+            <p styleName="premium-card__description" style={{fontSize:"15px"}}>
+            Chhipkali, our top-secret hideout for all things non-worky and semi-serious. It's like the Yammer, but for "serious" issues, anonimously. Vote for us, because breaking the code of silence has never been this hilarious!
             </p>
           </div>
         </div>
       </div>
       <div styleName="premium-card__button-container">
-        <button styleName="premium-card__button">Try Now</button>
+      <button styleName="premium-card__button" onClick={() => { window.open("https://www.mathworks.com", "_blank")}}>Vote for Us!</button>
       </div>
     </Card>
   );

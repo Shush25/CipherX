@@ -42,7 +42,7 @@ describe("Navbar", () => {
 
     await user.click(communityDropdown);
 
-    expect(screen.getByText("Create Community")).toBeInTheDocument();
+    expect(screen.getByText("Create Component")).toBeInTheDocument();
   });
   test("clicking Log in opens Modal", async () => {
     render(

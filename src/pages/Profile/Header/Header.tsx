@@ -28,31 +28,31 @@ const Header: React.FC<Props> = ({
           styleName={`header__tab ${posts && "header__tab--active"}`}
           onClick={() => dispatch({ type: "POSTS" })}
         >
-          Posts
+          Last Known Good
         </button>
         <button
           styleName={`header__tab ${comments && "header__tab--active"}`}
           onClick={() => dispatch({ type: "COMMENTS" })}
         >
-          Comments
+          Reviews
         </button>
         <button
           styleName={`header__tab ${saved && "header__tab--active"}`}
           onClick={() => dispatch({ type: "SAVED" })}
         >
-          Saved
+          Pending ChangeList
         </button>
         <button
           styleName={`header__tab ${upvotes && "header__tab--active"}`}
           onClick={() => dispatch({ type: "UPVOTES" })}
         >
-          Upvoted
+          ETH
         </button>
         <button
           styleName={`header__tab ${downvotes && "header__tab--active"}`}
           onClick={() => dispatch({ type: "DOWNVOTES" })}
         >
-          Downvotes
+          Flag
         </button>
       </div>
     </div>

@@ -2,9 +2,9 @@
 /* eslint-disable eqeqeq */
 import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/Gecko.png";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
-import logoName from "../../assets/white-logo-name.svg";
+import logoName from "../../assets/chhipkali1.png";
 import classNames from "classnames";
 import { getUser, signIn, signOutUser } from "../../firebase";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
@@ -23,6 +23,7 @@ import Dropdown from "../Dropdown/Dropdown";
 import CommunityDropdown from "../CommunityDropdown/CommunityDropdown";
 import ProfileDropdown from "../ProfileDropdown/ProfileDropdown";
 import { selectCommunityData } from "../../features/subreddit/subredditSlice";
+import HomeLogo from "../../assets/MWLogo.png"
 
 type InputEvent = React.ChangeEvent<HTMLInputElement>;
 
@@ -44,7 +45,7 @@ const Navbar: React.FC = () => {
   const [searchInput, setSearchInput] = useState("");
 
   function handleSearchInput(event: InputEvent) {
-    setSearchInput(event.target.value);
+    window.open('https://komodo.mathworks.com/main/gecko?Action=menu', '_blank');
   }
 
   function submitSearch(event: FormEvent) {
@@ -81,15 +82,17 @@ const Navbar: React.FC = () => {
               styleName="header__logo-name"
               src={logoName}
               alt="the name reddit"
+              style={{width:"100%",height:"30px"}}
             />
           </Link>
           {isLoggedIn && (
             <div styleName="header__dropdown-container">
               <div styleName="header__dropdown" onClick={handleHomeDropdown}>
                 <div styleName="header__dropdown-left">
-                  <AiFillHome styleName="header__dropdown-icon" />
+                  {/* <AiFillHome styleName="header__dropdown-icon" /> */}
+                  <img src={HomeLogo} styleName="header__dropdown-icon"></img>
                   <h1 styleName="header__dropdown-title">
-                    {Object.keys(params).length === 0 ? "Home" : name}
+                    {Object.keys(params).length === 0 ? "Inside" : name}
                   </h1>
                 </div>
                 <div styleName="header__dropdown-right">
@@ -114,10 +117,10 @@ const Navbar: React.FC = () => {
           <form onSubmit={submitSearch} styleName="header__search-form">
             <input
               styleName="header__search-input"
-              placeholder="Search Reddit ie. (r/dogs)"
+              placeholder="Search Gecko"
               onChange={handleSearchInput}
               value={searchInput}
-              pattern="(?:^| )(/?r/[a-z]+)"
+              pattern="(?:^| )(/?MW/[a-z]+)"
               title={`${searchInput} is not valid. Please enter a 'r/', followed by a subreddit name in the format 'r/dogs'`}
             />
           </form>

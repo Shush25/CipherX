@@ -106,7 +106,7 @@ const PostInteractions: React.FC<Props> = ({ commentsQuantity, postId }) => {
       <button styleName="post-excerpt__interaction">
         <BiMessage styleName="post-excerpt__icon" />
         <span styleName="post-excerpt__action">
-          {commentsQuantity} Comments
+          {commentsQuantity} Review comments
         </span>
       </button>
       <button styleName="post-excerpt__interaction">

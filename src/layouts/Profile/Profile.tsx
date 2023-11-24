@@ -6,7 +6,7 @@ import onlineStatus from "../../assets/online-status.svg";
 import { getUserName } from "../../firebase";
 import CSSModules from "react-css-modules";
 import Dropdown from "../Dropdown/Dropdown";
-
+import bhupendraJogi from "../../assets/bhujogi.jpg"
 interface Props {
   isLoggedIn: boolean;
 }
@@ -18,13 +18,15 @@ const Profile: React.FC<Props> = ({ isLoggedIn }) => {
         {isLoggedIn ? (
           <span styleName="profile__details">
             <img
-              src="https://styles.redditmedia.com/t5_g2km0/styles/profileIcon_snood9e1c00c-b1c6-46a9-a231-a6fcd78cdd16-headshot.png?width=256&height=256&frame=1&crop=256:256,smart&s=7bd48be150588ab7dc3dc5c73be4d0dcddeeae8d"
+              //src="https://styles.redditmedia.com/t5_g2km0/styles/profileIcon_snood9e1c00c-b1c6-46a9-a231-a6fcd78cdd16-headshot.png?width=256&height=256&frame=1&crop=256:256,smart&s=7bd48be150588ab7dc3dc5c73be4d0dcddeeae8d"
+              src = {bhupendraJogi}
               alt="default reddit avatar"
               styleName="profile__avatar"
+              style={{borderRadius:"50%",margin: "auto",marginRight: "6px"}}
             />
             <div styleName="profile__content">
               <p styleName="profile__username">{getUserName()}</p>
-              <p styleName="profile__karma">130 Karma</p>
+              <p styleName="profile__karma">Rating-0</p>
             </div>
           </span>
         ) : (

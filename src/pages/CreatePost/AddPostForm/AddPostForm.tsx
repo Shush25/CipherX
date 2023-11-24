@@ -51,6 +51,7 @@ const AddPostForm: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
+
   const handleTitleChange = (event: InputEvent) => {
     setTitle(event.target.value);
   };
@@ -60,7 +61,13 @@ const AddPostForm: React.FC = () => {
   };
 
   function handleTabChange(type: string) {
-    setSelectedTab(type);
+    if(type=="poll" || type=="talk"){
+      alert("Enhancement geck has been created for this issue");
+    }
+    else{
+      setSelectedTab(type);
+    }
+    // alert("Escalation has been created for this issue.");
   }
 
   const onSelectImage = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -123,15 +130,15 @@ const AddPostForm: React.FC = () => {
     <div styleName="post-creator">
       <div styleName="post-creator__header">
         <div styleName="post-creator__top">
-          <div styleName="post-creator__title">Create a post</div>
+          <div styleName="post-creator__title">Any issue ?</div>
         </div>
         <div styleName="post-creator__subreddit-description">
           Creating a post to the{" "}
           <span styleName="post-creator__subreddit-name">{`'${name}'`}</span>{" "}
-          subreddit
+          component
         </div>
         <p styleName="post-creator__subreddit-description">
-          Subreddit Description: {communityDescription}
+          Issue Description: {communityDescription}
         </p>
       </div>
       <div styleName="post-creator__form">

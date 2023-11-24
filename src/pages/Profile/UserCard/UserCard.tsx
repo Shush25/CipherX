@@ -5,6 +5,7 @@ import { TbCake } from "react-icons/tb";
 import Card from "../../../components/Card/Card";
 import { getUser, getUserName } from "../../../firebase";
 import moment from "moment";
+import bhupendra from "../../../assets/bhujogi.jpg";
 
 const UserCard: React.FC = () => {
   return (
@@ -14,7 +15,9 @@ const UserCard: React.FC = () => {
         <div styleName="user-card__avatar">
           <img
             styleName="user-card__image"
-            src="https://i.redd.it/snoovatar/avatars/d9e1c00c-b1c6-46a9-a231-a6fcd78cdd16.png"
+            //src="https://i.redd.it/snoovatar/avatars/d9e1c00c-b1c6-46a9-a231-a6fcd78cdd16.png"
+            src={bhupendra}
+            style={{borderRadius:"50%"}}
             alt="default avatar profile"
           />
         </div>
